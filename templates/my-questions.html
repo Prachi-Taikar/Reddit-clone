@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{% block content%}
+
+{% if messages %}
+        <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="text-{{message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor%}
+        </ul>
+    {% endif %}
+    {% if questions%}
+        {% for question in questions%}
+        <p>username : {{ users }}</p>      
+        <p>question : {{question.question}}</P>
+        {%endfor%}
+    {% endif %}
+
+{% endblock %}
